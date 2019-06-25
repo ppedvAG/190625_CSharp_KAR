@@ -12,20 +12,22 @@ namespace HalloWelt
         {
             Console.WriteLine("Hallo Welt");
 
-            int zahl1 = 42; // Direkt zuweisen
-            Console.WriteLine(zahl1);
+            #region Variablen
+            //int zahl1 = 42; // Direkt zuweisen
+            //Console.WriteLine(zahl1);
 
-            int zahl2; // Standardwert: 0
-            // ...
-            zahl2 = 12;
-            Console.WriteLine(zahl2);
+            //int zahl2; // Standardwert: 0
+            //// ...
+            //zahl2 = 12;
+            //Console.WriteLine(zahl2);
 
-            // Mehrere Variablen in einer Zeile deklarieren:
-            int z1, z2, z3;
-            // Direkt Werte vergeben:
-            int z4 = 4, z5 = 5, z6 =6;
+            //// Mehrere Variablen in einer Zeile deklarieren:
+            //int z1, z2, z3;
+            //// Direkt Werte vergeben:
+            //int z4 = 4, z5 = 5, z6 = 6;
 
-            string text = "Demo";
+            //string text = "Demo";
+            #endregion
 
 
 
