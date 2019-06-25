@@ -78,6 +78,22 @@ namespace HalloWelt
             //Console.WriteLine(ergebnis); 
             #endregion
 
+            Console.WriteLine("Bitte geben Sie eine Zahl ein:");
+            string eingabe = Console.ReadLine();
+
+            int zahl = Convert.ToInt32(eingabe);
+
+            if(zahl < 10)
+            {
+                Console.WriteLine("kleiner als 10");
+            }
+            else if(zahl == 10)
+                Console.WriteLine("exakt 10"); // Klammern bei einer einzelnen Zeile weglassbar
+            else
+            {
+                Console.WriteLine("größer als 10");
+            }
+
             Console.ReadKey(); // Alternative: ReadLine();
         }
     }
