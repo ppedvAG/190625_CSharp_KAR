@@ -125,6 +125,39 @@ namespace HalloWelt
             //Console.WriteLine(arrayImArray[1][3]); 
             #endregion
 
+            // for + TAB + TAB  -> Increment
+            // forr + TAB + TAB -> Decrement
+
+            string[] namen = { "Tom Ate", "Anna Nass", "Peter Silie", "Franz Ose", "Martha Pfahl", "Klara Fall", "Albert Tross", "Frank N Stein", "Rainer Zufall", "Anna Bolika", "Axel Schweiß" };
+
+            // for:
+
+            //for (int i = 0; i < namen.Length; i++)
+            //{
+            //    Console.WriteLine(namen[i]);
+            //}
+
+            foreach (var item in namen)
+            {
+                Console.WriteLine(item); // item == der einzelne Name in der Liste
+            }
+
+            int[,] schachbrett = new int[8, 8];
+            schachbrett[0, 0] = 1;
+            schachbrett[0, 1] = 2;
+            schachbrett[0, 2] = 3;
+            schachbrett[1, 0] = 4;
+            schachbrett[1, 1] = 5;
+            foreach (var item in schachbrett)
+            {
+                if (item % 2 == 0) // gerade zahl
+                    continue; //mach einfach weiter
+                Console.WriteLine(item);
+
+                // continue; // zum nächsten durchgang
+                // break; // komplett beenden
+            }
+
             Console.ReadKey(); // Alternative: ReadLine();
         }
     }
