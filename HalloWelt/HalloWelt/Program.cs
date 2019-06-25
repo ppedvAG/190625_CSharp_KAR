@@ -10,6 +10,8 @@ namespace HalloWelt
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hallo Welt");
+            Console.ReadKey(); // Alternative: ReadLine();
         }
     }
 }
