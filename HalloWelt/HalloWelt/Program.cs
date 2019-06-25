@@ -78,21 +78,52 @@ namespace HalloWelt
             //Console.WriteLine(ergebnis); 
             #endregion
 
-            Console.WriteLine("Bitte geben Sie eine Zahl ein:");
-            string eingabe = Console.ReadLine();
+            #region If
+            //Console.WriteLine("Bitte geben Sie eine Zahl ein:");
+            //string eingabe = Console.ReadLine();
 
-            int zahl = Convert.ToInt32(eingabe);
+            //int zahl = Convert.ToInt32(eingabe);
 
-            if(zahl < 10)
-            {
-                Console.WriteLine("kleiner als 10");
-            }
-            else if(zahl == 10)
-                Console.WriteLine("exakt 10"); // Klammern bei einer einzelnen Zeile weglassbar
-            else
-            {
-                Console.WriteLine("größer als 10");
-            }
+            //if(zahl < 10)
+            //{
+            //    Console.WriteLine("kleiner als 10");
+            //}
+            //else if(zahl == 10)
+            //    Console.WriteLine("exakt 10"); // Klammern bei einer einzelnen Zeile weglassbar
+            //else
+            //{
+            //    Console.WriteLine("größer als 10");
+            //}
+            // // Environment.NewLine  // <- Macht ein NewLine wie \n\r 
+            #endregion
+
+            #region Arrays
+            //int[] meinezahlen = new int[5]; // Index: 0,1,2,3,4
+            //meinezahlen[0] = 9;
+            //meinezahlen[1] = 18;
+            //meinezahlen[2] = 3;
+            //Console.WriteLine(meinezahlen[0]);
+
+            //// ArrayInitialisierer
+            //int[] zahlen = new int[] { 1, 2, 3, 4, 5 };
+            //Console.WriteLine(zahlen[1]);
+            //int[] megafaul = { 9, 1, 2, 3, 4 };
+
+            //// Mehrdimensionales Array
+
+            //int[,] schachbrett = new int[8, 8];
+            //schachbrett[0, 5] = 12;
+
+            //int[,,] dreidimensional = new int[9, 18, 27];
+
+            //// Array in dem Arrays drinnen sind
+            //int[][] arrayImArray = new int[5][];
+            //arrayImArray[0] = new int[10];
+            //arrayImArray[1] = new int[3];
+            //arrayImArray[2] = new int[5];
+
+            //Console.WriteLine(arrayImArray[1][3]); 
+            #endregion
 
             Console.ReadKey(); // Alternative: ReadLine();
         }
