@@ -29,7 +29,7 @@ namespace OOP
             #endregion
 
             Fahrzeug audi = new Fahrzeug();
-            audi.Inhaber = new Person("Tom","Ate");
+            audi.Inhaber = new Person("Tom", "Ate");
             //audi.Inhaber = new Person();
             //audi.Inhaber.Vorname = "Tom";
             //audi.Inhaber.Nachname = "Ate";

@@ -14,21 +14,24 @@ namespace OOP
 
     class Person // Klasse == "Bauplan"
     {
-        // ctor + TAB + TAB
-        public Person()
-        {
-            Vorname = "Max";
-            Nachname = "Mustermann";
-            Alter = 10;
-            Kontostand = 100;
-        }
-        public Person(string vorname, string nachname)
-        {
-            Vorname = vorname;
-            Nachname = nachname;
-        }
-
+        #region Variante Einfach
+        //// ctor + TAB + TAB
+        ////public Person()
+        ////{
+        ////    Vorname = "Max";
+        ////    Nachname = "Mustermann";
+        ////    Alter = 10;
+        ////    Kontostand = 100;
+        ////}
+        ////public Person(string vorname, string nachname)
+        ////{
+        ////    Vorname = vorname;
+        ////    Nachname = nachname;
+        ////} 
+        #endregion
         // QuickActionsAndRefactoring / STRG + . => GenerateConstructor
+
+
 
 
         #region Variante ohne Properties
@@ -67,6 +70,18 @@ namespace OOP
                 else
                     vorname = value;
             }
+        }
+
+        // Teleskopkonstruktor
+        public Person(string vorname) : this(vorname,"Mustermann"){}
+        public Person(string vorname,string nachname) : this(vorname,nachname,10){}
+        public Person(string vorname,string nachname,byte alter) : this(vorname,nachname,alter,0){}
+        public Person(string vorname,string nachname, byte alter, decimal kontostand)
+        {
+            Vorname = vorname;
+            Nachname = nachname;
+            Alter = alter;
+            Kontostand = kontostand;
         }
 
         // propfull + TAB + TAB
