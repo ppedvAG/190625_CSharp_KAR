@@ -26,16 +26,35 @@ namespace Funktionen
             // Dokumentation erstellen:
             // Einstellungen -> Build -> XML Documentation File - Option aktivieren
 
-            MachEtwas();
-            MachEtwas();
-            MachEtwas();
+            //MachEtwas();
+            //MachEtwas();
+            //MachEtwas();
 
-            MachEtwas("Hallo Welt");
+            //MachEtwas("Hallo Welt");
 
-            GibMirEineZufallszahl(100); // rückgabe verfällt
+            //GibMirEineZufallszahl(100); // rückgabe verfällt
 
-            int zufallsZahl = GibMirEineZufallszahl(0, 1000);
-            Console.WriteLine(zufallsZahl);
+            //int zufallsZahl = GibMirEineZufallszahl(0, 1000);
+            //Console.WriteLine(zufallsZahl);
+
+
+            //int meineZahl = 12;
+
+            //int veränderteZahl = VerändereDieZahl(ref meineZahl);
+
+            //Console.WriteLine($"MeineZahl: {meineZahl}");
+            //Console.WriteLine($"VeränderteZahl: {veränderteZahl}");
+
+
+            int ergebnis = 0;
+            // bool erfolg = KonvertiereEtwas("123", ref ergebnis);
+            bool erfolg = KonvertiereEtwas("123", out ergebnis);
+
+            Console.WriteLine(erfolg);
+            Console.WriteLine(ergebnis);
+
+            Console.WriteLine(Addieren(3,4));
+            Console.WriteLine(Addieren(3,4,6,4,2,3,5,7,78,9654));
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
@@ -80,5 +99,47 @@ namespace Funktionen
             return generator.Next(minimum, maximum);
         }
         #endregion
+
+
+        public static int VerändereDieZahl(ref int zahl) // Ref -> Es wird eine Referenz auf die Variable übergeben
+        {
+            zahl *= 50;
+            return zahl;
+        }
+
+        // out funktioniert wie ref mit dem Unterschied, dass eine neuzuweisung ERZWUNGEN wird
+        // bei ref kann man einen wert setzen, man muss aber nicht ...
+        public static bool KonvertiereEtwas(string eingabe,out int ergebnis)
+        {
+            // konvertiert ....
+            ergebnis = int.Parse(eingabe);
+            return true; // War die Konvertierung erfolgreich ? 
+        }
+
+        // in -> funktioniert wie ref, macht aber die Variable schreibgeschützt
+        public static int VerändereDieReadonlyZahl(in int zahl)
+        {
+            // zahl *= 50; // <- wirft einen Fehler beim setzen der Variable
+            return zahl;
+        }
+
+        //public static int Addieren(int z1, int z2)
+        //{
+        //    return z1 + z2;
+        //}
+        //public static int Addieren(int z1, int z2, int z3)
+        //{
+        //    return z1 + z2 + z3;
+        //}
+        //public static int Addieren(int z1, int z2, int z3, int z4)
+        //{
+        //    return z1 + z2 + z3 + z4;
+        //}
+
+        public static int Addieren(params int[] alleZahlen)
+        {
+            return alleZahlen.Sum();
+        }
+
     }
 }
