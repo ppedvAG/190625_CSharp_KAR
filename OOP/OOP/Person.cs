@@ -73,15 +73,22 @@ namespace OOP
         }
 
         // Teleskopkonstruktor
-        public Person(string vorname) : this(vorname,"Mustermann"){}
-        public Person(string vorname,string nachname) : this(vorname,nachname,10){}
-        public Person(string vorname,string nachname,byte alter) : this(vorname,nachname,alter,0){}
-        public Person(string vorname,string nachname, byte alter, decimal kontostand)
+        public Person(string vorname) : this(vorname, "Mustermann") { }
+        public Person(string vorname, string nachname) : this(vorname, nachname, 10) { }
+        public Person(string vorname, string nachname, byte alter) : this(vorname, nachname, alter, 0) { }
+        public Person(string vorname, string nachname, byte alter, decimal kontostand)
         {
             Vorname = vorname;
             Nachname = nachname;
             Alter = alter;
             Kontostand = kontostand;
+        }
+
+        // Destruktor: ~Person
+
+        ~Person()
+        {
+            Console.WriteLine("Ich werde gelöscht :( ");
         }
 
         // propfull + TAB + TAB
@@ -118,6 +125,16 @@ namespace OOP
 
         public decimal Kontostand { get; private set; }
 
+        // Readonly-Property
+        private string vn;
+        private string nn;
+        public string GanzerName
+        {
+            get
+            {
+                return vn + " " + nn;
+            }
+        }
 
     }
 }
