@@ -29,10 +29,15 @@ namespace OOP
             #endregion
 
             Fahrzeug audi = new Fahrzeug();
-            audi.Inhaber = new Person();
-            audi.Inhaber.Vorname = "Tom";
-            audi.Inhaber.Nachname = "Ate";
+            audi.Inhaber = new Person("Tom","Ate");
+            //audi.Inhaber = new Person();
+            //audi.Inhaber.Vorname = "Tom";
+            //audi.Inhaber.Nachname = "Ate";
             audi.Inhaber.Alter = 80;
+
+            // Objektinitialisierer
+            // Array: int[] zahlen = new int[] { 12, 12, 12, 12, 12 };
+            // Objekt: Person p1 = new Person() { Vorname = "10", Nachname = "12" };
 
             Console.WriteLine($"{audi.Inhaber.Vorname}: Aktuelle Geschwindigkeit: {audi.Geschwindigkeit}kmh, Kilometerstand: {audi.Kilometerstand}");
             audi.Beschleunigen(10);            

@@ -14,6 +14,23 @@ namespace OOP
 
     class Person // Klasse == "Bauplan"
     {
+        // ctor + TAB + TAB
+        public Person()
+        {
+            Vorname = "Max";
+            Nachname = "Mustermann";
+            Alter = 10;
+            Kontostand = 100;
+        }
+        public Person(string vorname, string nachname)
+        {
+            Vorname = vorname;
+            Nachname = nachname;
+        }
+
+        // QuickActionsAndRefactoring / STRG + . => GenerateConstructor
+
+
         #region Variante ohne Properties
         //// Felder (immer private)
         //private string vorname;
