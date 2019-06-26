@@ -12,6 +12,7 @@ namespace Funktionen
         // Enum => Definition wie der Datentyp aussieht
         enum Wochentage {Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag,Sonntag}
 
+        enum Rechenoperation {Add,Sub,Mul,Div}
         
         static void Main(string[] args)
         {
@@ -70,6 +71,14 @@ namespace Funktionen
 
             if (wecker == Wochentage.Montag)
                 Console.Beep(800,2000);
+
+            // Beispiel für das Umsetzen einer Nutzereingabe zu einem Enum-Wert
+            Console.WriteLine("1 Für Add, 2 für sub ....");
+            int benutzerEingabeAlsZahl = 2;
+
+            Rechenoperation gewünschteOperation = (Rechenoperation)benutzerEingabeAlsZahl;
+            if (gewünschteOperation == Rechenoperation.Add)
+                ; // ...
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
