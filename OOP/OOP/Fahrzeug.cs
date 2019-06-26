@@ -8,6 +8,11 @@ namespace OOP
 {
     class Fahrzeug
     {
+        public Fahrzeug(string meinText)
+        {
+            // ....
+        }
+
         public Person Inhaber { get; set; }
 
         private int geschwindigkeit;
@@ -45,7 +50,7 @@ namespace OOP
                 return;
             }
             Geschwindigkeit += wert;
-            Console.WriteLine("BRUMMMM");
+            Console.WriteLine("BRUMMMM.....");
         }
         public void Bremsen(int wert)
         {
