@@ -8,6 +8,11 @@ namespace Funktionen
 {
     class Program
     {
+        // Enumeration:
+        // Enum => Definition wie der Datentyp aussieht
+        enum Wochentage {Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag,Sonntag}
+
+        
         static void Main(string[] args)
         {
             // STRG + D => Duplizieren
@@ -26,6 +31,7 @@ namespace Funktionen
             // Dokumentation erstellen:
             // Einstellungen -> Build -> XML Documentation File - Option aktivieren
 
+            #region Funktionen
             //MachEtwas();
             //MachEtwas();
             //MachEtwas();
@@ -46,15 +52,24 @@ namespace Funktionen
             //Console.WriteLine($"VeränderteZahl: {veränderteZahl}");
 
 
-            int ergebnis = 0;
-            // bool erfolg = KonvertiereEtwas("123", ref ergebnis);
-            bool erfolg = KonvertiereEtwas("123", out ergebnis);
+            //int ergebnis = 0;
+            //// bool erfolg = KonvertiereEtwas("123", ref ergebnis);
+            //bool erfolg = KonvertiereEtwas("123", out ergebnis);
 
-            Console.WriteLine(erfolg);
-            Console.WriteLine(ergebnis);
+            //Console.WriteLine(erfolg);
+            //Console.WriteLine(ergebnis);
 
-            Console.WriteLine(Addieren(3,4));
-            Console.WriteLine(Addieren(3,4,6,4,2,3,5,7,78,9654));
+            //Console.WriteLine(Addieren(3,4));
+            //Console.WriteLine(Addieren(3,4,6,4,2,3,5,7,78,9654)); 
+            #endregion
+
+            // int zahl1 = 5;
+            // if(zahl1 < 10)
+
+            Wochentage wecker = Wochentage.Montag;
+
+            if (wecker == Wochentage.Montag)
+                Console.Beep(800,2000);
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
