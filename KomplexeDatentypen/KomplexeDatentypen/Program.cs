@@ -118,7 +118,48 @@ namespace KomplexeDatentypen
             //Console.WriteLine(Guid.NewGuid().ToString());
             #endregion
 
-            
+            #region Wertetypen: Wertevergleich und die Wertekopie
+            //int zahl1 = 42;
+            //int zahl2 = 42;
+
+            //if(zahl1 == zahl2) // Wertevergleich
+            //    Console.WriteLine("Zahlen sind gleich");
+            //else
+            //    Console.WriteLine("Zahlen sind nicht gleich");
+
+            //int zahl3 = zahl1; // Wertekopie
+
+            //if(zahl1 == zahl3)
+            //    Console.WriteLine("Kopie ist gleich");
+            //else
+            //    Console.WriteLine("Kopie ist nicht gleich"); 
+            #endregion
+
+            Person p1 = new Person { Vorname = "Tom", Nachname = "Ate", Alter = 10, Kontostand = 10000 };
+            Person p2 = new Person { Vorname = "Tom", Nachname = "Ate", Alter = 10, Kontostand = 10000 };
+
+            if(p1 == p2) // Referenzvergleich
+                Console.WriteLine("Die Personen sind gleich");
+            else
+                Console.WriteLine("Die Personen sind nicht gleich");
+
+            Person p3 = p1; // Referenzkopie
+
+            if (p1 == p3) // Referenzvergleich
+                Console.WriteLine("Die Personenkopie ist identisch");
+            else
+                Console.WriteLine("Die Personenkopie sind nicht identisch");
+
+
+            // Echter Vergleich der Werte:
+            // Variante mühsam:
+            // if(p1.Vorname == p2.Vorname && ....)
+
+            if(p1.Equals(p2))
+                Console.WriteLine("Die Werte sind identisch");
+            else
+                Console.WriteLine("Die Werte sind nicht identisch");
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
