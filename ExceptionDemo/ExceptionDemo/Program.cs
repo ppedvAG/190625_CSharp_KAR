@@ -21,13 +21,17 @@ namespace ExceptionDemo
             {
                 zahl = Convert.ToInt32(eingabe);
             }
-            catch (Exception)
+            catch (FormatException)
             {
-                Console.WriteLine("Es gibt einen Fehler 😭");
-                // Console.WriteLine(ex.Message); // originale Fehlermeldung ausgeben
-                // throw; // Fehler weiterwerfen
-
-                return; // beende das programm wegen einem fehler
+                Console.WriteLine("Bitte geben Sie nur ganze Zahlen ein");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Ihre Zahl war zu groß oder zu klein");
+            }
+            catch (Exception)// fängt alles ab
+            {
+                Console.WriteLine("Unbekannter Fehler :/ ");
             }
             finally
             {
@@ -36,8 +40,31 @@ namespace ExceptionDemo
             }
 
             Console.WriteLine($"Das Doppelte ist : {zahl * 2}");
+
+            try
+            {
+
+                int erg1 = Dividieren(10, 2);
+                int erg2 = Dividieren(10, 0);
+            }
+            catch(ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
+
+
+        public static int Dividieren(int z1, int z2)
+        {
+            if (z2 == 0)
+                throw new ArgumentNullException("Man darf nicht durch 0 dividieren");
+
+            int ergebnis = z1 / z2;
+            return ergebnis;
+        }
+
     }
 }
