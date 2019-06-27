@@ -47,7 +47,11 @@ namespace ExceptionDemo
                 int erg1 = Dividieren(10, 2);
                 int erg2 = Dividieren(10, 0);
             }
-            catch(ArgumentException ex)
+            catch(ArgumentException ex) when (ex.Message == "dieserfehlercode")
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (ArgumentException ex) when (ex.Message == "einandererfehlercode")
             {
                 Console.WriteLine(ex.Message);
             }
