@@ -55,6 +55,64 @@ namespace Polymorphie
             Rechteck r4 = (Rechteck)g4;
             r4.Zeichnen();
 
+            Console.WriteLine("----------------Anwendungsfall----------------");
+            #region Variante ohne Polymorphie
+            //Grafik[] meineGrafiken = new Grafik[3];
+            //meineGrafiken[0] = new Grafik() { Farbe = "Türkis" };
+            //meineGrafiken[1] = g1;
+            //meineGrafiken[2] = new Grafik() { Farbe = "Weiß" };
+
+            //Kreis[] meineKreise = new Kreis[3];
+            //meineKreise[0] = new Kreis(9) { Farbe = "Schwarz" };
+            //meineKreise[1] = k1;
+            //meineKreise[2] = new Kreis(123) { Farbe = "Grau" };
+
+            //Rechteck[] meineRechtecke = new Rechteck[3];
+            //meineRechtecke[0] = new Rechteck(10,10) { Farbe = "Kaffemilchbeige" };
+            //meineRechtecke[1] = r1;
+            //meineRechtecke[2] = new Rechteck(50,49) { Farbe = "Ocker" };
+
+            //foreach (Grafik item in meineGrafiken)
+            //{
+            //    item.Zeichnen();
+            //}
+
+            //foreach (Kreis item in meineKreise)
+            //{
+            //    item.Zeichnen();
+            //}
+
+            //foreach (Rechteck item in meineRechtecke)
+            //{
+            //    item.Zeichnen();
+            //}
+            #endregion
+
+
+            Grafik[] meineGrafiken = new Grafik[9];
+            meineGrafiken[0] = new Grafik() { Farbe = "Türkis" };
+            meineGrafiken[1] = g1;
+            meineGrafiken[2] = new Grafik() { Farbe = "Weiß" };
+            meineGrafiken[3] = new Kreis(9) { Farbe = "Schwarz" };
+            meineGrafiken[4] = k1;
+            meineGrafiken[5] = new Kreis(123) { Farbe = "Grau" };
+            meineGrafiken[6] = new Rechteck(10, 10) { Farbe = "Kaffemilchbeige" };
+            meineGrafiken[7] = r1;
+            meineGrafiken[8] = new Rechteck(50, 49) { Farbe = "Ocker" };
+
+            foreach (var item in meineGrafiken)
+            {
+                //if(item is Rechteck)
+                //{
+                //    var rechteck = (Rechteck)item;
+                //    rechteck.Zeichnen();
+                //}
+                if (item is Rechteck r) // Seit C#7
+                    r.Zeichnen();
+                else
+                    item.Zeichnen();
+            }
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
