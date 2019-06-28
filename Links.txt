@@ -4,3 +4,6 @@ http://visualstudioshortcuts.com/2017/
 https://docs.microsoft.com/de-de/dotnet/api/system.string.format?view=netframework-4.8
 https://referencesource.microsoft.com/
 https://github.com/dotnet/ILMerge
+
+Ressourcen Einbetten:
+https://stackoverflow.com/questions/11185904/embed-text-file-in-resources
