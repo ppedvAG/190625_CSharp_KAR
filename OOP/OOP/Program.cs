@@ -77,7 +77,7 @@ namespace OOP
             // Grafik g1 = new Grafik(); // nicht mehr erstellbar wenn die Klasse abstrakt ist
             Kreis k1 = new Kreis();
 
-            g1.Zeichnen();
+            // g1.Zeichnen();
             k1.Zeichnen();
 
             Console.WriteLine("---ENDE---");

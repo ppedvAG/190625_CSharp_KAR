@@ -12,7 +12,7 @@ namespace OOP
      * Klassennamen werden groß geschrieben
      */
 
-    class Person // Klasse == "Bauplan"
+    public class Person // Klasse == "Bauplan"
     {
         #region Variante Einfach
         //// ctor + TAB + TAB
