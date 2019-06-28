@@ -16,5 +16,18 @@ namespace HalloForms
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hallo Welt aus Windows-Forms");
+
+            // Zugriff auf ein Steuerelement geht über den Namen
+            MessageBox.Show(textBox1.Text);
+
+            // Unterschiedliche MessageBoxen:
+            var result = MessageBox.Show("ACHTUNG !", "Mein Titel", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                ; // logik ..
+        }
     }
 }
