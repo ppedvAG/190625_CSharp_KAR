@@ -99,6 +99,10 @@ namespace FortgeschritteneThemen
 
             // https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
 
+#if DEBUG
+            Console.WriteLine("LOGGING");
+#endif
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---FortgeschrittenesENDE---");
             Console.ReadKey();
         }
