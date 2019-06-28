@@ -3,3 +3,4 @@ Nützliche Links:
 http://visualstudioshortcuts.com/2017/
 https://docs.microsoft.com/de-de/dotnet/api/system.string.format?view=netframework-4.8
 https://referencesource.microsoft.com/
+https://github.com/dotnet/ILMerge
